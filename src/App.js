@@ -3,8 +3,11 @@ import SearchEngine from './components/SearchEngine/SearchEngine';
 
 class App extends React.Component {
   render() {
+    const AppStyle = {
+      textAlign: 'center'
+    }
     return (
-      <div className="App">
+      <div style={AppStyle}>
         <SearchEngine />
       </div>
     );
