@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,7 +12,10 @@ const useStyles = makeStyles(theme => ({
   },
 	searchEngine: {
 		border: '1px solid black',
-	},
+  },
+  button: {
+    margin: theme.spacing(1)
+  },
 }));
 
 function SearchEngine() {
@@ -25,6 +29,7 @@ function SearchEngine() {
         </Typography>
         <form>
           <TextField label="Search GIFs" type="search" />
+          <Button className={classes.button} variant='contained' color='primary'>GIFs</Button>
         </form>
       </Paper>
 		</div>
