@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 
 function UserInput() {
   const [appState, updateState] = useContext(SearchEngineContext);
-
+  
   const handleInputChange = event => {
     return updateState({type: 'INPUT_CHANGE', payload: event.target.value});
   }
