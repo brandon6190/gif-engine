@@ -1,36 +1,36 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
 
+// * Tree Components
+import SearchField from './SearchField/SearchField';
+import SearchResults from './SearchResults/SearchResults';
+
+// * method to create classes and css rules
+import { makeStyles } from '@material-ui/core/styles';
+
+// * Styled Components
+import Paper from '@material-ui/core/Paper';
+// import Typography from '@material-ui/core/Typography';
+
+// * Hook to use classes and their respective css rules
 const useStyles = makeStyles(theme => ({
   root: {
     margin: '50px',
-    padding: theme.spacing(3,2)
-  },
-	searchEngine: {
-		border: '1px solid black',
-  },
-  button: {
-    margin: theme.spacing(1)
-  },
+    padding: theme.spacing(3,2),
+  }
 }));
 
 function SearchEngine() {
-	const classes = useStyles();
+  const { root } = useStyles();
 
 	return (
-		<div className={classes.searchEngine}>
-      <Paper className={classes.root}>
-        <Typography variant='h1' component='h1'>
-          GIFY Search Engine
-        </Typography>
-        <form>
-          <TextField label="Search GIFs" type="search" />
-          <Button className={classes.button} variant='contained' color='primary'>GIFs</Button>
-        </form>
+		<div>
+      <Paper className={root}>
+        {/* <Typography variant='h1' component='h1'>
+          GIFY Engine
+        </Typography> */}
+
+        <SearchField />
+        <SearchResults />
       </Paper>
 		</div>
 	);
