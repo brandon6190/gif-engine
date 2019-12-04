@@ -11,7 +11,7 @@ function UserInput() {
   }
 
   return (
-    <TextField onChange={handleInputChange} value={appState.searchTerm} label="Search GIFs" type="search" />
+    <TextField onChange={handleInputChange} placeholder={appState.searchTerm} label="Search GIFs" type="search" />
   );
 }
 
